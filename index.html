@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Product Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Product Project">
+  <meta name="author" content="Yasuhiro Ito">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Product Project</h1>
+    <h2>Central Limit Theorem Simulation Application</h2>
+    <p>Yasuhiro Ito<br/>IT system auditor interested in data science</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Central Limit Theorem</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Wikipedia</a></p>
+
+<p><font size="4" color="#800000"><i> In probability theory, the central limit theorem (CLT) states that, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of independent random variables, each with a well-defined expected value and well-defined variance, will be approximately normally distributed, <u><b>regardless of the underlying distribution</b></u>.&quot; </i></font></p>
+
+<p><font size="4">Let \({X_1, \cdots, X_n}\) be a random sample of size \(n\) - that is, a sequence of independent and identically distributed random variables drawn from distributions of expected values given by \(\mu\) and finite variances given by \(\sigma^2\). Suppose we are interested in the sample average</p>
+
+<p>\(S_n := \frac{X_1+\cdots+X_n}{n}\)</p>
+
+<p>of these random variables. For large enough \(n\), the distribution of \(S_n\) is close to <u><b>the normal distribution</b></u> with <u><b>mean \(\mu\) </b></u>and <u><b>variance 
+\(\frac{\sigma^2}{n}\) </b></u></font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Central Limit Theorem Simulation Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><font size="4">We can learn about the theorem with playing this application</font></li>
+<li><font size="4">We can adjust sample size and the number of trials</font></li>
+<li><font size="4">We can choose from 4 different distribution types</font></li>
+</ol>
+
+<pre><code class="r">set.seed(300)
+par(mfrow=c(1,4))
+hist(runif(100), 10, xlab=&quot;Sample&quot;,col=&quot;lightblue&quot;,main=&quot;Uniform Distribution&quot;, probability = TRUE)
+hist(rnorm(100), 10, xlab=&quot;Sample&quot;,col=&quot;lightblue&quot;,main=&quot;Normal Distribution&quot;, probability = TRUE)
+hist(rpois(100,4.0), 10, xlab=&quot;Sample&quot;,col=&quot;lightblue&quot;,main=&quot;Poisson Distribution&quot;, probability = TRUE)
+hist(rexp(100), 10, xlab=&quot;Sample&quot;,col=&quot;lightblue&quot;,main=&quot;Exponential Distribution&quot;, probability = TRUE)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1">
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Application Screenshot</h2>
+  </hgroup>
+  <article data-timings="">
+    <div align="center"><img src = 'assets/img/screenshot.PNG' height='570px'></img></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>URL</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><li><a href="https://yappon.shinyapps.io/jhu_data_products/">Central Limit Theorem Simulation Application</a></li>
+<li><a href="https://github.com/yappon/jhu_data_products/wiki/Central-Limit-Theorem-Simulation-Application">Help page for this application</a></li>
+<li><a href="https://github.com/yappon/jhu_data_products/">GitHub repository for this application</a></li></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Central Limit Theorem'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Central Limit Theorem Simulation Application'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application Screenshot'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='URL'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
