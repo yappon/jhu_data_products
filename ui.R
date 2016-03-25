@@ -5,7 +5,8 @@ shinyUI(
                 headerPanel("Central Limit Theorem Simulation"),
 
                 sidebarPanel(
-                        h5(a("Help", href="http://www.yahoo.co.jp/")),
+                        h5(a("Help - How to use this application", 
+                             href="https://github.com/yappon/jhu_data_products/wiki/Central-Limit-Theorem-Simulation-Application")),
 
                         selectInput("distribution", "Distribution:",
                                     selected = "unif",
@@ -17,7 +18,7 @@ shinyUI(
                         numericInput(inputId = "n", value = 40, label = "Sampling size",
                                      min = 10, max=400, step=10),
                         numericInput(inputId = "trial", value = 1000,
-                                     label = "The number of trial", min = 500, max = 2000, step=50)
+                                     label = "The number of trials", min = 500, max = 2000, step=50)
                 ),
 
                 mainPanel(
